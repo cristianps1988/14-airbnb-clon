@@ -40,3 +40,13 @@
     gap: $espaciado;
     grid-template-columns: repeat($columnas, 1fr);
 }
+
+@mixin scrollHorizontal{
+    overflow-y: hidden; // esconder el scroll de toda la pagina
+    overflow-x: scroll; // solo haga scroll esta seccion
+    scroll-snap-type: x mandatory;
+
+    > * {
+        scroll-snap-align: center; // para que quede centrado al hacer scroll
+    }
+}
